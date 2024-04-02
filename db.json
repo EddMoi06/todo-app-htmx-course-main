@@ -1,0 +1,24 @@
+{
+  "todos": [
+    {
+      "id": "0fbf0334-8ba4-41c8-90a7-26479d8adee1",
+      "completed": true,
+      "name": "Learn HTML V2"
+    },
+    {
+      "id": "363e941f-b958-4a49-92ca-fd4134bbee7b",
+      "completed": false,
+      "name": "Learn CSS"
+    },
+    {
+      "id": "7869ef79-1c84-4112-ba73-dd272aafc049",
+      "completed": false,
+      "name": "Learn React"
+    },
+    {
+      "id": "978427d9-6724-4710-9d1c-938e89bba217",
+      "completed": false,
+      "name": "Learn Angular"
+    }
+  ]
+}

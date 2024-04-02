@@ -1,0 +1,19 @@
+<div class="flex items-center mb-4 justify-between" id="todo-{{this.id}}">
+  <div class="flex">
+    <input
+      name="completed"
+      hx-patch="/todos/{{this.id}}"
+      hx-target="body"
+      hx-swap="innerHTML"
+      type="checkbox"
+      class="h-6 w-6 mr-4"
+      {{#if this.completed}} checked {{/if}}
+    />
+    <div>{{this.name}}</div>
+  </div>
+  <div class="flex gap-4">
+    <img hx-get="/todos/{{this.id}}/edit?filter={{#if this.selectedFilter}}{{this.selectedFilter}}{{else}}{{@root.selectedFilter}}{{/if}}" hx-target="#todo-{{this.id}}" hx-swap="outerHTML transition:true" src="assets/edit.svg" alt="Edit" class="h-6 w-6 cursor-pointer" title="Edit Todo" />
+
+    <img hx-delete="/todos/{{this.id}}?filter={{#if this.selectedFilter}}{{this.selectedFilter}}{{else}}{{@root.selectedFilter}}{{/if}}" src="assets/trash.svg" alt="Delete" hx-confirm="Are you sure?" hx-target="#todo-{{this.id}}" hx-swap="delete transition:true" hx-select-oob="#filterBtns" class="h-6 w-6 cursor-pointer" title="Delete Todo" />
+  </div>
+</div>
